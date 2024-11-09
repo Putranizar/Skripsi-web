@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="k2tourtravel.co">
+    <link rel="shortcut icon" href="k2 - logo new.png">
+    <title>Profil Pelanggan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Profil Pelanggan</h2>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="halamanutama-pelanggan.html" class="btn btn-light" id="back-btn">
+                <i class="fas fa-arrow-left"></i> 
+            </a>
+        </div>
+    </div>
+    <div class="profile-box">
+        <div id="profile-view">
+            <p><strong>Nama:</strong> <span id="name-display">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="email-display">john.doe@example.com</span></p>
+            <p><strong>No Telepon:</strong> <span id="phone-display">081234567890</span></p>
+            <button class="btn btn-primary" id="edit-btn">Edit</button>
+        </div>
+    
+        <div id="profile-edit" class="d-none">
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control" id="name" value="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">No Telepon</label>
+                    <input type="tel" class="form-control" id="phone" value="081234567890">
+                </div>
+                <button type="button" class="btn btn-primary" id="save-btn">Simpan</button>
+                <button type="button" class="btn btn-secondary" id="cancel-btn">Batal</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<!-- JavaScript -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('edit-btn').addEventListener('click', function() {
+        document.getElementById('profile-view').classList.add('d-none');
+        document.getElementById('profile-edit').classList.remove('d-none');
+    });
+
+    document.getElementById('save-btn').addEventListener('click', function() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+
+        document.getElementById('name-display').innerText = name;
+        document.getElementById('email-display').innerText = email;
+        document.getElementById('phone-display').innerText = phone;
+
+        document.getElementById('profile-view').classList.remove('d-none');
+        document.getElementById('profile-edit').classList.add('d-none');
+    });
+
+    document.getElementById('cancel-btn').addEventListener('click', function() {
+        document.getElementById('profile-view').classList.remove('d-none');
+        document.getElementById('profile-edit').classList.add('d-none');
+    });
+</script>
+
+</body>
+</html>

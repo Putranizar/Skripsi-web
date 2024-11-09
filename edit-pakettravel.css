@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+.close-button {
+    position: fixed; /* Tetap berada di pojok atas meskipun di-scroll */
+    top: 30px !important;
+    right: 30px !important;    
+    font-size: 24px; /* Ukuran ikon */
+    color: #333; /* Warna ikon */
+    z-index: 1000; /* Z-index tinggi agar berada di atas elemen lain */
+}
+
+.close-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.close-button a:hover {
+    color: #ff0000; /* Warna saat ikon dihover */
+    transition: color 0.3s;
+}
+
+
+h1 {
+    color: #333;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: darkgoldenrod;
+    color: white;
+    font-size: 14;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+        background-color: rgb(107, 79, 8);
+}
+
+.btn-input {
+    display: inline-block;
+    background-color: darkmagenta;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.btn-input:hover {
+    background-color: rgb(92, 0, 92);
+}
+
+
+.btn-delete {
+    display: inline-block;
+    background-color: rgb(221, 6, 6);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #911724;
+}
+
+img {
+    margin: 10px 0;
+}

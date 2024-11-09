@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="k2 - logo new.png">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Konten Utama -->
+    <div class="container-fluid">
+        <div class="row main-content">
+            <!-- Bagian Gambar di Kiri -->
+            <div class="col-md-4 text-center company__info">
+                <span class="company__logo">
+                    <img src="images/k2.jpeg" alt="Logo Perusahaan K2" class="img-fluid">
+                </span>
+            </div>
+            
+            <!-- Bagian Form Login -->
+            <div class="col-md-8 login_form">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h2>Log In</h2>
+                    </div>
+                    <div class="row">
+                        <!-- Form Login -->
+                        <form action="login.php" method="POST" class="form-group">
+                            <div class="row">
+                                <input type="text" name="username" id="username" class="form__input" placeholder="Username" required>
+                            </div>
+                            <div class="row">
+                                <input type="password" name="password" id="password" class="form__input" placeholder="Password" required>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class="btn">Login</button>
+                            </div>   
+                        </form>
+                    </div>
+                    <div class="registerbawah">
+                        <p>Tidak Mempunyai Akun? <a href="register.html">Register</a></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

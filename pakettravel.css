@@ -1,0 +1,287 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style untuk body */
+body {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Kontainer utama */
+.container {
+    width: 70%;
+    max-width: 1200px; /* Menambahkan batas lebar maksimum */
+    padding: 20px;
+}
+
+/* Judul utama */
+h1 {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Style umum untuk paket */
+.package {
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen fleksibel */
+    justify-content: space-between;
+    align-items: center;
+    background-color: wheat;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Responsif untuk package */
+@media (max-width: 768px) {
+    .package {
+        flex-direction: column; /* Stack elemen di bawah satu sama lain */
+        align-items: center; /* Rata tengah */
+        height: auto; /* Ubah menjadi auto */
+    }
+}
+
+/* Style untuk teks paket */
+.package-text {
+    width: 70%;
+}
+
+/* Responsif untuk teks paket */
+@media (max-width: 768px) {
+    .package-text {
+        width: 100%;
+    }
+}
+
+/* Style untuk judul paket */
+.package-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(116, 116, 116, 0.678);
+    line-height: 1.4;
+}
+
+/* Responsif untuk judul paket */
+@media (max-width: 768px) {
+    .package-text h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .package-text h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Style untuk paragraf teks paket */
+.package-text p {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+}
+
+/* Style untuk ikon di paragraf */
+.package-text p i {
+    color: darkmagenta;
+    margin-right: 8px;
+}
+
+/* Responsif untuk paragraf dan ikon */
+@media (max-width: 768px) {
+    .package-text p {
+        font-size: 14px; /* Ukuran font lebih kecil untuk layar tablet */
+        margin-bottom: 8px; /* Mengurangi jarak margin di bawah */
+        text-align: justify;
+    }
+
+    .package-text p i {
+        font-size: 14px; /* Ukuran ikon disesuaikan */
+        margin-right: 6px; /* Mengurangi jarak antar ikon dan teks */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-text p {
+        font-size: 12px; /* Ukuran font lebih kecil untuk layar ponsel */
+        margin-bottom: 6px; /* Margin bawah lebih kecil */
+    }
+
+    .package-text p i {
+        font-size: 12px; /* Ukuran ikon lebih kecil untuk layar ponsel */
+        margin-right: 4px; /* Jarak antar ikon dan teks lebih kecil */
+    }
+}
+
+/* Style untuk tautan detail */
+.detail-btn {
+    display: inline-block; /* Membuat tautan sebagai blok inline */
+    background-color: #ffffff; /* Latar belakang putih */
+    color: darkgoldenrod; /* Warna teks */
+    border: 2px solid darkgoldenrod; /* Border dengan warna yang sama */
+    border-radius: 30px; /* Sudut melengkung */
+    padding: 10px 20px; /* Ruang dalam */
+    font-size: 16px; /* Ukuran font */
+    font-weight: 600; /* Ketebalan font */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus untuk efek hover */
+    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+}
+
+/* Hover untuk tautan detail */
+.detail-btn:hover {
+    background-color: darkgoldenrod; /* Latar belakang saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .detail-btn {
+        padding: 6px 12px;  /* Kurangi padding agar lebih proporsional di tablet */
+        font-size: 14px;     /* Ukuran font lebih kecil di tablet */
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsif untuk ponsel */
+@media (max-width: 480px) {
+    .detail-btn {
+        padding: 5px 10px;  /* Padding lebih kecil untuk layar ponsel */
+        font-size: 13px;    /* Ukuran font lebih kecil di ponsel */
+        margin-bottom: 10px;
+    }
+}
+
+/* Style untuk gambar paket */
+.package-image {
+    width: 25%; /* Menjaga gambar proporsional */
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    height: auto; /* Mengubah height dari fixed menjadi auto */
+    max-height: 150px; /* Batasan tinggi maksimum untuk menjaga proporsi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover untuk gambar paket */
+.package-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover untuk gambar di dalam paket */
+.package-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsif untuk gambar paket */
+@media (max-width: 768px) {
+    .package-image {
+        width: 40%; /* Atur untuk layar yang lebih kecil */
+        height: auto; /* Pastikan tinggi bersifat otomatis */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-image {
+        width: 60%; /* Lebar lebih kecil untuk layar ponsel */
+        height: auto; /* Pastikan tinggi bersifat otomatis */
+    }
+}
+
+/* Style untuk gambar di dalam package */
+.package-image img {
+    width: 100%;
+    height: auto;
+    border: 2px solid darkgoldenrod;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Posisi tombol kembali di kanan atas */
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Style untuk tombol kembali */
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: darkgoldenrod;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Ikon untuk tombol kembali */
+.back-button a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Hover untuk tombol kembali */
+.back-button a:hover {
+    background-color: #a77d19;
+}
+
+/* Responsif untuk tombol kembali */
+@media (max-width: 768px) {
+    .back-button a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .back-button a i {
+        font-size: 16px;
+    }
+
+    .back-button {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .back-button a i {
+        font-size: 14px;
+    }
+
+    .back-button {
+        top: 8px;
+        right: 8px;
+    }
+}

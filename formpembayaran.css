@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Gaya untuk judul di atas kontainer */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Gaya kontainer form */
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.form-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-header .close {
+    font-size: 24px;
+    cursor: pointer;
+    color: grey;
+}
+
+h3 {
+    font-size: 24px;
+    color: rgb(53, 53, 53);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.note {
+    font-size: 14px;
+    color: #d9534f; /* Warna merah untuk menonjolkan pesan penting */
+    background-color: #f8d7da; /* Latar belakang merah muda untuk perhatian */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn.confirm {
+    background-color: darkmagenta;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Media Query untuk layar kecil (seperti smartphone) */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        width: 100%;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .note {
+        font-size: 13px;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+    .form-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media Query untuk layar yang lebih besar (seperti tablet atau desktop) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .form-container {
+        padding: 30px;
+        width: 80%;
+    }
+}

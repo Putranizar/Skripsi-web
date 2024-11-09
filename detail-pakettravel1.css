@@ -1,0 +1,219 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style for body */
+body {
+    background-color: #f5f7fa; /* Light gray background for overall page */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Main container */
+.container {
+    width: 70%; /* Responsive width */
+    padding: 20px; /* Padding inside container */
+}
+
+/* Main title */
+h1 {
+    margin-top: 50px; /* Space above title */
+    font-size: 2rem; /* Title font size */
+    color: black; /* Title color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+/* Package styles */
+.package {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: wheat;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    gap: 20px; /* Space between image and text */
+}
+
+/* Responsive adjustments for package */
+@media (max-width: 768px) {
+    .package {
+        flex-direction: column; /* Stack text and image on smaller screens */
+        height: auto; /* Auto height for flexible content */
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+/* Cream-colored text box */
+.text-box {
+    background-color: #f5f5dc; /* Cream background color */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px; /* Space below the box */
+}
+
+/* Package text styles */
+.package-text {
+    font-size: 14px; /* Base font size */
+    font-weight: 600; /* Bold text */
+    color: rgb(51, 51, 51); /* Text color */
+    margin-bottom: 20px; /* Space below text */
+    text-align: justify; /* Justify text */
+}
+
+/* Icon styles */
+.package-text p i,
+.package-text ul li i {
+    color: #333333; /* Icon color */
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px; /* Icon size */
+}
+
+/* Paragraph styles */
+.package-text p {
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Unordered list styles */
+.package-text ul {
+    padding-left: 20px; /* Indentation for lists */
+    list-style-type: none; /* Remove default bullet */
+}
+
+.package-text ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 16px; /* Font size for list text */
+}
+
+/* Package title styles */
+.package-text h2 {
+    font-size: 22px; /* Heading font size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 15px; /* Space below heading */
+    color: black; /* Title color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .text-box {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .package-text {
+        font-size: 13px; /* Slightly smaller font size */
+    }
+
+    .package-text ul li {
+        font-size: 15px; /* Adjust font size for list items */
+    }
+
+    .package-text h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-box {
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .package-text {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    .package-text ul li {
+        font-size: 14px; /* Adjust font size for list items */
+    }
+
+    .package-text h2 {
+        font-size: 18px; /* Adjust heading size */
+    }
+}
+
+
+/* Image styles for package */
+.package-image {
+    width: 60%; /* Full width */
+    background-color: #f1f1f1; /* Light background for image area */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+    margin-bottom: 20px; /* Space below image */
+    margin-top: 10px;
+}
+
+/* Image inside package styles */
+.package-image img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid darkgoldenrod; /* Border for image */
+    border-radius: 8px; /* Rounded corners for image */
+    transition: transform 0.3s ease; /* Transition for scaling */
+    object-fit: contain; /* Ensure the entire image is visible */
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 768px) {
+    .package-image {
+        max-height: 250px; /* Adjust image height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-image {
+        max-height: 200px; /* Adjust image height for mobile */
+    }
+}
+
+/* Back button positioning */
+.back-button {
+    position: fixed; /* Fixed position for back button */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Back button styles */
+.back-button a {
+    display: inline-flex; /* Flexbox for button */
+    align-items: center; /* Center icon and text */
+    justify-content: center; /* Center content */
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    background-color: darkgoldenrod; /* Button background */
+    padding: 10px 15px; /* Padding inside button */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold text for button */
+    transition: background-color 0.3s ease; /* Transition for hover */
+}
+
+/* Hover effect for back button */
+.back-button a:hover {
+    background-color: #a77d19; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for back button */
+@media (max-width: 768px) {
+    .back-button a {
+        padding: 8px 15px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button a {
+        padding: 6px 12px; /* Adjust padding */
+        font-size: 12px; /* Adjust font size */
+    }
+}
